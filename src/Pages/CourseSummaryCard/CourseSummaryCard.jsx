@@ -1,8 +1,9 @@
 import React from "react";
-import { Card, Image } from "react-bootstrap";
+import { Button, Card, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const CourseSummaryCard = (course) => {
-  const { title, image_url, details, _id } = course.course;
+const CourseSummaryCard = ({ course }) => {
+  const { title, image_url, details, _id } = course;
   // console.log(title);
   return (
     <div>
@@ -12,6 +13,11 @@ const CourseSummaryCard = (course) => {
           <Card.Title>{title}</Card.Title>
           <Image fluid src={image_url}></Image>
           <Card.Text>{details}</Card.Text>
+          <Card.Text>
+            <Link to={`/course/${_id}`}>
+              <Button>Get Premium</Button>
+            </Link>
+          </Card.Text>
         </Card.Body>
         <Card.Footer className="text-muted">2 days ago</Card.Footer>
       </Card>
