@@ -11,7 +11,7 @@ const LeftSideBar = () => {
   }, []);
 
   return (
-    <div>
+    <div className="my-5">
       <h4>All category: {categories.length}</h4>
       <div>
         {categories.map((category) => (
