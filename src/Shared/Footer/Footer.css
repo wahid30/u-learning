@@ -1,0 +1,10 @@
+.custom-footer {
+  background-color: rgb(12, 3, 46);
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+.custom-footer-1 {
+  /* margin-top: 100px; */
+  padding: 100px;
+}
