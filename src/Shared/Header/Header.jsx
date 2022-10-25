@@ -4,13 +4,20 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
+import { HiOutlineIdentification } from "react-icons/hi";
 const Header = () => {
   return (
     <div>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
-            <Link to="/">Ulearning</Link>
+          <Navbar.Brand
+            href="#home"
+            className="btn btn-light d-flex align-items-center"
+          >
+            <HiOutlineIdentification className="fs-3" />
+            <Link to="/" className="text-decoration-none text-black">
+              Ulearning
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

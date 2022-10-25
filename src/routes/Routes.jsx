@@ -22,4 +22,8 @@ export const routes = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "*",
+    element: <h2>this is error</h2>,
+  },
 ]);
