@@ -25,34 +25,25 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#home">
-                <Button variant="outline-primary">
-                  <Link
-                    to="/home"
-                    className="text-decoration-none custom-hover"
-                  >
+                <Link to="/home" className="text-decoration-none ">
+                  <Button className="custom-hover" variant="outline-primary">
                     Home
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </Nav.Link>
               <Nav.Link href="#link">
-                <Button variant="outline-primary">
-                  <Link
-                    to="/courses"
-                    className="text-decoration-none custom-hover"
-                  >
+                <Link to="/courses" className="text-decoration-none">
+                  <Button className=" custom-hover" variant="outline-primary">
                     Courses
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </Nav.Link>
               <Nav.Link href="#link">
-                <Button variant="outline-primary">
-                  <Link
-                    to="/blogs"
-                    className="text-decoration-none custom-hover"
-                  >
+                <Link to="/blogs" className="text-decoration-none ">
+                  <Button className="custom-hover" variant="outline-primary">
                     Blogs
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </Nav.Link>
               <NavDropdown title="FAQ" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
