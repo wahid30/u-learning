@@ -8,7 +8,7 @@ const Courses = () => {
   // console.log(courses);
   return (
     <div className="my-5">
-      <h2>This is category has course: {courses.length}</h2>
+      <h2>There have total {courses.length} Courses</h2>
       <div className="custom-grid">
         {courses?.map((course) => (
           <CourseSummaryCard

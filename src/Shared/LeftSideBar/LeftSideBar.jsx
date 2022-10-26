@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const LeftSideBar = () => {
@@ -12,11 +13,15 @@ const LeftSideBar = () => {
 
   return (
     <div className="my-5">
-      <h4>All category: {categories.length}</h4>
+      {/* <h4>All category: {categories.length}</h4> */}
       <div>
         {categories.map((category) => (
           <p key={category.id}>
-            <Link to={`/category/${category.id}`}>{category.name}</Link>
+            <Link to={`/category/${category.id}`}>
+              <Button className="text-black" variant="outline-info">
+                {category.name}
+              </Button>
+            </Link>
           </p>
         ))}
       </div>
