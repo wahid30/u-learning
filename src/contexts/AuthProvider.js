@@ -9,6 +9,7 @@ import {
   updateProfile,
   signInWithPopup,
   GoogleAuthProvider,
+  GithubAuthProvider,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 import { useEffect } from "react";
@@ -19,7 +20,8 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
-  const provider = new GoogleAuthProvider();
+  const GoogleProvider = new GoogleAuthProvider();
+  const GitHubProvider = new GithubAuthProvider();
 
   // for registration
   const createUser = (email, password) => {
@@ -51,7 +53,12 @@ const AuthProvider = ({ children }) => {
   // for google singIn
   const googleSignIn = () => {
     setLoading(true);
-    return signInWithPopup(auth, provider);
+    return signInWithPopup(auth, GoogleProvider);
+  };
+
+  // for github sign in
+  const githubSignIn = () => {
+    return signInWithPopup(auth, GitHubProvider);
   };
 
   useEffect(() => {
@@ -72,6 +79,7 @@ const AuthProvider = ({ children }) => {
     logOut,
     displayUser,
     googleSignIn,
+    githubSignIn,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
