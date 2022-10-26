@@ -34,6 +34,15 @@ const Login = () => {
         <Button variant="primary" type="submit">
           Login
         </Button>
+        <div className="mt-3 text-center">
+          <Button className="mb-2 w-100 p-3" variant="outline-primary">
+            Signin With Google
+          </Button>
+          <br />
+          <Button className="mb-2 w-100 p-3" variant="outline-secondary">
+            Signin With GitHub
+          </Button>
+        </div>
       </Form>
     </div>
   );
