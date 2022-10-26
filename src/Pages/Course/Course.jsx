@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 
 const Course = () => {
   const course = useLoaderData();
-  const { author, details, title, _id, image_url } = course;
+  const { author, details, title, _id, image_url, rating, price } = course;
   return (
     <div className="mt-5">
       <Card className="mb-4">
@@ -15,6 +15,10 @@ const Course = () => {
           <Card.Title>{title}</Card.Title>
           <Image fluid src={image_url}></Image>
           <Card.Text>{details}</Card.Text>
+        </Card.Body>
+        <Card.Body className="d-flex justify-content-between">
+          <p className="text-success fs-5">Price:{price}</p>
+          <p className="text-danger">Rating: {rating.number}</p>
         </Card.Body>
       </Card>
     </div>
