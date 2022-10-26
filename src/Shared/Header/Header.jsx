@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,7 +8,12 @@ import { HiOutlineIdentification } from "react-icons/hi";
 import { Button } from "react-bootstrap";
 import "./Header.css";
 import LeftSideBar from "../LeftSideBar/LeftSideBar";
+import { AuthContext } from "../../contexts/AuthProvider";
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut();
+  };
   return (
     <div>
       <Navbar bg="light" expand="lg">
@@ -61,13 +66,21 @@ const Header = () => {
               </NavDropdown>
             </Nav>
             <Nav>
-              <Nav.Link>Logout</Nav.Link>
               <Nav.Link eventKey={2}>
-                <Link to="/login">
-                  <Button className="custom-hover" variant="outline-danger">
-                    Login
-                  </Button>
-                </Link>
+                {user?.uid ? (
+                  <>
+                    <span>{user?.displayName}</span>
+                    <Button onClick={handleLogOut}>LogOut</Button>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/login">
+                      <Button className="custom-hover" variant="outline-danger">
+                        Login
+                      </Button>
+                    </Link>
+                  </>
+                )}
               </Nav.Link>
             </Nav>
             <div className="d-lg-none">
