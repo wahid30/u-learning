@@ -9,7 +9,7 @@ import { Button, Image } from "react-bootstrap";
 import "./Header.css";
 import LeftSideBar from "../LeftSideBar/LeftSideBar";
 import { AuthContext } from "../../contexts/AuthProvider";
-import { FaUsers } from "react-icons/fa";
+import { FaRegUser } from "react-icons/fa";
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
@@ -70,7 +70,7 @@ const Header = () => {
               <Nav.Link eventKey={2}>
                 {user?.uid ? (
                   <>
-                    <span>{user?.displayName}</span>
+                    <span className="mx-2">{user?.displayName}</span>
                     <Button onClick={handleLogOut}>LogOut</Button>
                   </>
                 ) : (
@@ -91,7 +91,7 @@ const Header = () => {
                     src={user.photoURL}
                   ></Image>
                 ) : (
-                  <FaUsers></FaUsers>
+                  <FaRegUser></FaRegUser>
                 )}
               </Nav.Link>
             </Nav>

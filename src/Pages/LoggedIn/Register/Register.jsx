@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider";
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, displayUser } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -20,6 +20,12 @@ const Register = () => {
         console.log(user);
         form.reset();
       })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    displayUser(name, photoUrl)
+      .then(() => {})
       .catch((error) => {
         console.log(error);
       });
