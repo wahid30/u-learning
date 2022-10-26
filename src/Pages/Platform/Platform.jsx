@@ -12,7 +12,7 @@ const Platform = () => {
   }, []);
   return (
     <div className="my-5">
-      <h4>All category: {categories.length}</h4>
+      <h4>There have total {categories.length} platform</h4>
       <div className="custom-grid">
         {categories.map((category) => (
           <PlatformCourses

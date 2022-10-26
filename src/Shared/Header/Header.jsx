@@ -19,11 +19,10 @@ const Header = () => {
     <div>
       <Navbar bg="light" expand="lg">
         <Container className="d-flex justify-content-between">
-          <Navbar.Brand
-            href="#home"
-            className="btn btn-light d-flex align-items-center"
-          >
-            <HiOutlineIdentification className="fs-3" />
+          <Navbar.Brand className="btn btn-light d-flex align-items-center">
+            <Link to="/" className="text-decoration-none text-black">
+              <HiOutlineIdentification className="fs-3" />
+            </Link>
             <Link to="/" className="text-decoration-none text-black">
               Ulearning
             </Link>
