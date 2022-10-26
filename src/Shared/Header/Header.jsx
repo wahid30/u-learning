@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { HiOutlineIdentification } from "react-icons/hi";
 import { Button } from "react-bootstrap";
 import "./Header.css";
+import LeftSideBar from "../LeftSideBar/LeftSideBar";
 const Header = () => {
   return (
     <div>
@@ -63,6 +64,9 @@ const Header = () => {
               <Nav.Link>Logout</Nav.Link>
               <Nav.Link eventKey={2}>login</Nav.Link>
             </Nav>
+            <div className="d-lg-none">
+              <LeftSideBar></LeftSideBar>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
