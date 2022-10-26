@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -7,6 +7,7 @@ import { AuthContext } from "../../../contexts/AuthProvider";
 
 const Login = () => {
   const { singIn, googleSignIn } = useContext(AuthContext);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -29,7 +30,8 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
+        setError(error.message);
       });
   };
 
@@ -59,6 +61,8 @@ const Login = () => {
         <p>
           For Register. Please <Link to="/register">Register</Link>
         </p>
+        <span className="text-danger">{error}</span>
+        <br />
         <Button variant="primary" type="submit">
           Login
         </Button>
