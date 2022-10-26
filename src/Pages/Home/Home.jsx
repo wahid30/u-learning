@@ -4,7 +4,7 @@ import CourseSummaryCard from "../CourseSummaryCard/CourseSummaryCard";
 
 const Home = () => {
   const allCourses = useLoaderData();
-  console.log(allCourses);
+  // console.log(allCourses);
   return (
     <div className="mt-5">
       {allCourses?.map((course) => (

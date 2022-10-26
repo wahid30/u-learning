@@ -62,7 +62,13 @@ const Header = () => {
             </Nav>
             <Nav>
               <Nav.Link>Logout</Nav.Link>
-              <Nav.Link eventKey={2}>login</Nav.Link>
+              <Nav.Link eventKey={2}>
+                <Link to="/login">
+                  <Button className="custom-hover" variant="outline-danger">
+                    Login
+                  </Button>
+                </Link>
+              </Nav.Link>
             </Nav>
             <div className="d-lg-none">
               <LeftSideBar></LeftSideBar>
