@@ -42,12 +42,9 @@ const AuthProvider = ({ children }) => {
   };
 
   // for show user name and img
-  const displayUser = (displayName, photoURL) => {
+  const updateUserProfile = (profile) => {
     setLoading(true);
-    return updateProfile(auth.currentUser, {
-      displayName: displayName,
-      photoURL: photoURL,
-    });
+    return updateProfile(auth.currentUser, profile);
   };
 
   // for google singIn
@@ -77,7 +74,7 @@ const AuthProvider = ({ children }) => {
     createUser,
     singIn,
     logOut,
-    displayUser,
+    updateUserProfile,
     googleSignIn,
     githubSignIn,
   };
