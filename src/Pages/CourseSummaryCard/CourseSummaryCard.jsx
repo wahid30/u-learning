@@ -22,7 +22,7 @@ const CourseSummaryCard = ({ course }) => {
         <Card.Body>
           <div ref={ref}>
             <Card.Title>{title}</Card.Title>
-            <Image fluid src={image_url}></Image>
+            <Image className="img-fluid" src={image_url}></Image>
             <Card.Text>{details}</Card.Text>
           </div>
           <Card.Text>

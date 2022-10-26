@@ -8,7 +8,7 @@ const PlatformCourses = ({ category }) => {
   return (
     <div>
       <Card style={{ width: "18rem" }}>
-        <Card.Img fluid variant="top" src={img} />
+        <Card.Img className="img-fluid" variant="top" src={img} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>

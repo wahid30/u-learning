@@ -3,6 +3,7 @@ import Main from "../layouts/Main";
 import Blogs from "../Pages/Blogs/Blogs";
 import Course from "../Pages/Course/Course";
 import Courses from "../Pages/Courses/Courses";
+import FAskQuestion from "../Pages/FAskQuestion/FAskQuestion";
 import Home from "../Pages/Home/Home";
 import HomePage from "../Pages/HomePage/HomePage";
 import Login from "../Pages/LoggedIn/Login/Login";
@@ -52,6 +53,10 @@ export const routes = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>,
+      },
+      {
+        path: "/faq",
+        element: <FAskQuestion></FAskQuestion>,
       },
       {
         path: "/login",

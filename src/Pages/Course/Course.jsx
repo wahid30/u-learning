@@ -22,7 +22,7 @@ const Course = () => {
         <div ref={ref}>
           <Card.Body>
             <Card.Title>{title}</Card.Title>
-            <Image fluid src={image_url}></Image>
+            <Image className="img-fluid" src={image_url}></Image>
             <Card.Text>{details}</Card.Text>
           </Card.Body>
           <Card.Body className="d-flex justify-content-between">
