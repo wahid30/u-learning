@@ -5,10 +5,11 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import { HiOutlineIdentification } from "react-icons/hi";
-import { Button } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 import "./Header.css";
 import LeftSideBar from "../LeftSideBar/LeftSideBar";
 import { AuthContext } from "../../contexts/AuthProvider";
+import { FaUsers } from "react-icons/fa";
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
@@ -80,6 +81,17 @@ const Header = () => {
                       </Button>
                     </Link>
                   </>
+                )}
+              </Nav.Link>
+              <Nav.Link eventKey={2}>
+                {user?.photoURL ? (
+                  <Image
+                    style={{ height: "40px" }}
+                    roundedCircle
+                    src={user.photoURL}
+                  ></Image>
+                ) : (
+                  <FaUsers></FaUsers>
                 )}
               </Nav.Link>
             </Nav>
