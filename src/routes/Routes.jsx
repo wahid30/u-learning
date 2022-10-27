@@ -25,7 +25,7 @@ export const routes = createBrowserRouter([
         path: "/home",
         element: <Home></Home>,
         loader: async () => {
-          return fetch("http://localhost:5000/course");
+          return fetch("https://ulearling-server-site.vercel.app/course");
         },
       },
       {
@@ -36,7 +36,9 @@ export const routes = createBrowserRouter([
         path: "/category/:id",
         element: <Courses></Courses>,
         loader: async ({ params }) => {
-          return fetch(`http://localhost:5000/category/${params.id}`);
+          return fetch(
+            `https://ulearling-server-site.vercel.app/category/${params.id}`
+          );
         },
       },
       {
@@ -47,7 +49,9 @@ export const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: async ({ params }) => {
-          return fetch(`http://localhost:5000/course/${params.id}`);
+          return fetch(
+            `https://ulearling-server-site.vercel.app/course/${params.id}`
+          );
         },
       },
       {

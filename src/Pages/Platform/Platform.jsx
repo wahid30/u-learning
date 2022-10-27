@@ -6,7 +6,7 @@ const Platform = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/platform")
+    fetch("https://ulearling-server-site.vercel.app/platform")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
