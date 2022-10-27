@@ -8,7 +8,9 @@ import LeftSideBar from "../Shared/LeftSideBar/LeftSideBar";
 const Main = () => {
   return (
     <div>
+      {/* for nav bar */}
       <Header></Header>
+      {/* for main section */}
       <Container>
         <Row>
           <Col lg="3" className="d-none d-lg-block">
@@ -19,6 +21,7 @@ const Main = () => {
           </Col>
         </Row>
       </Container>
+      {/* for footer */}
       <Footer></Footer>
     </div>
   );

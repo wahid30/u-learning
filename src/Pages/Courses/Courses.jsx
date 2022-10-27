@@ -5,7 +5,6 @@ import CourseSummaryCard from "../CourseSummaryCard/CourseSummaryCard";
 
 const Courses = () => {
   const courses = useLoaderData();
-  // console.log(courses);
   return (
     <div className="my-5">
       <h2>There have total {courses.length} Courses</h2>

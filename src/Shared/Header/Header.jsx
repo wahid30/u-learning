@@ -64,7 +64,6 @@ const Header = () => {
               <Nav.Link eventKey={2}>
                 {user?.uid ? (
                   <>
-                    {/* <span className="mx-2">{user?.displayName}</span> */}
                     <Button onClick={handleLogOut}>LogOut</Button>
                   </>
                 ) : (

@@ -6,7 +6,6 @@ import Pdf from "react-to-pdf";
 const ref = React.createRef();
 const CourseSummaryCard = ({ course }) => {
   const { title, image_url, details, _id } = course;
-  // console.log(title);
   return (
     <div>
       <Card className="mb-4">

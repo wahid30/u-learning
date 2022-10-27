@@ -6,7 +6,7 @@ import Pdf from "react-to-pdf";
 const ref = React.createRef();
 const Course = () => {
   const course = useLoaderData();
-  const { author, details, title, _id, image_url, rating, price } = course;
+  const { details, title, image_url, rating, price } = course;
   return (
     <div className="mt-5">
       <Card className="mb-4">
