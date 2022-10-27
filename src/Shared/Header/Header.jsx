@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -9,9 +9,10 @@ import { Button, Image } from "react-bootstrap";
 import "./Header.css";
 import LeftSideBar from "../LeftSideBar/LeftSideBar";
 import { AuthContext } from "../../contexts/AuthProvider";
-import { FaRegUser } from "react-icons/fa";
+import { FaRegUser, FaSun, FaMoon } from "react-icons/fa";
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [open, setOpen] = useState(false);
   const handleLogOut = () => {
     logOut();
   };
@@ -87,6 +88,19 @@ const Header = () => {
                 ) : (
                   <FaRegUser></FaRegUser>
                 )}
+                <>
+                  {open ? (
+                    <FaMoon
+                      onClick={() => setOpen(!open)}
+                      className="ms-3"
+                    ></FaMoon>
+                  ) : (
+                    <FaSun
+                      className="ms-3"
+                      onClick={() => setOpen(!open)}
+                    ></FaSun>
+                  )}
+                </>
               </Nav.Link>
             </Nav>
             <div className="d-lg-none">
